@@ -35,6 +35,8 @@ print(notebook1["get_all"]())
 
 def expanded_form(number: int | str) -> str:
     number_string: str = str(number)
+    if number_string == '0':
+        return '0'
     number_len: int = len(number_string)
     result_string: str = ''
     for n, letter in enumerate(number_string):
@@ -45,6 +47,8 @@ def expanded_form(number: int | str) -> str:
     return result_string[:-3]
 
 
+print(expanded_form(0))
+print(expanded_form(1))
 print(expanded_form(12))
 print(expanded_form(42))
 print(expanded_form(70304))
