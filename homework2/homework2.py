@@ -1,6 +1,6 @@
 from __future__ import annotations
-
 from collections.abc import Callable
+
 
 # написать функцию на замыкания которая будет в себе хранить лист дел, вам нужно реализовать два метода
 # - первый записывает в эту переменную запись
@@ -31,6 +31,7 @@ notebook1["add_todo"]("Eat")
 notebook1["add_todo"]("Sleep")
 print(notebook1["get_all"]())
 
+
 # 3) создать функцию которая будет возвращать сумму разрядов числа в виде строки (тоже с типизацией)
 
 def expanded_form(number: int | str) -> str:
@@ -42,7 +43,7 @@ def expanded_form(number: int | str) -> str:
     for n, letter in enumerate(number_string):
         if letter == '0':
             continue
-        result_string += letter+('0'*(number_len-n-1))
+        result_string += letter + ('0' * (number_len - n - 1))
         result_string += " + "
     return result_string[:-3]
 
