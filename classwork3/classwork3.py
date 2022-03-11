@@ -71,7 +71,8 @@ class Cinderella(Human):
         self.foot_size = foot_size
         Cinderella.counter += 1
     
-    def show_counter(self):
+    @staticmethod
+    def show_counter():
         print(Cinderella.counter)
 
 
