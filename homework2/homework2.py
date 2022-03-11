@@ -1,4 +1,3 @@
-from __future__ import annotations
 from collections.abc import Callable
 
 
@@ -35,7 +34,7 @@ print(notebook1["get_all"]())
 # 3) создать функцию которая будет возвращать сумму разрядов числа в виде строки (тоже с типизацией)
 
 def expanded_form(number: int | str) -> str:
-    number_string: str = str(number)
+    number_string = str(number)
     if number_string == '0':
         return '0'
     number_len: int = len(number_string)
